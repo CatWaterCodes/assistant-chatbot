@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="chat-box" id="chat-box">
+          <!-- Messages will appear here -->
+      </div>
+      <div class="input-container">
+        <textarea id="user-input" placeholder="Type your message..." data-autosize-input='{ "space": 40 }'></textarea>
+        <button id="send-btn">Send</button>
+      </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
