@@ -71,5 +71,3 @@ def chat(prompt: str, model="mistral") -> str:
         return chat(f"here are the responses of the functions you called: {str(function_responses)} use these to answer the user's last prompt")
     else:
         return prompt_response["message"]["content"]
-    
-#print(chat("can you give me an insteresting idea for a cake?"))
