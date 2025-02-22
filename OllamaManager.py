@@ -1,5 +1,4 @@
 import ollama
-import json
 import AssistantFunctions
 import subprocess
         
@@ -32,7 +31,7 @@ def get_response_to_prompt(prompt: str, fn_definitions: dict, model="mistral") -
         messages = [
             {
                 'role': 'system',
-                'content': "You are an AI assistant. You have some tools at your disposal, such as functions that are given to you to help the user. This doesn't mean that you should use functions if you can just reply to the prompt without them. Refrain from using them as much as possible if they are unnecessary, and make sure they exist in your list of given tools if you are to use them. Try not to mention functions to the user, and when you call one and the response is given back to you, inform the user as if you had gotten it yourself without a function.",
+                'content': "Never mention functions at your disposal. Only use them when absolutely necessary.",
             },
 
             {
